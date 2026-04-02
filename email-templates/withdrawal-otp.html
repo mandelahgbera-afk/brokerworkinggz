@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="x-apple-disable-message-reformatting">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Your Vested Withdrawal OTP</title>
+  <!--[if mso]>
+  <noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript>
+  <![endif]-->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@600;700&display=swap');
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 0; background-color: #070c18; }
+    @media only screen and (max-width: 600px) {
+      .email-wrapper { width: 100% !important; }
+      .email-card { padding: 32px 24px !important; border-radius: 16px !important; }
+      .email-heading { font-size: 22px !important; }
+      .otp-box { font-size: 36px !important; letter-spacing: 12px !important; }
+    }
+  </style>
+</head>
+<body style="margin:0;padding:0;background-color:#070c18;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;">
+
+  <!-- Preview text -->
+  <span style="display:none;font-size:1px;color:#070c18;max-height:0;max-width:0;opacity:0;overflow:hidden;mso-hide:all;">
+    Your Vested withdrawal OTP: {{OTP_CODE}} — expires in 15 minutes.
+  </span>
+
+  <!-- Outer wrapper -->
+  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#070c18;">
+    <tr>
+      <td align="center" style="padding:48px 16px;">
+
+        <!-- Container -->
+        <table class="email-wrapper" cellpadding="0" cellspacing="0" border="0" style="max-width:560px;width:100%;">
+
+          <!-- Logo row -->
+          <tr>
+            <td align="center" style="padding-bottom:32px;">
+              <table cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td style="background:linear-gradient(135deg,#22c55e 0%,#16a34a 100%);border-radius:14px;padding:11px 18px;">
+                    <span style="font-size:19px;font-weight:700;color:#ffffff;letter-spacing:-0.3px;font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;">&#9650; Vested</span>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Main card -->
+          <tr>
+            <td class="email-card" style="background-color:#0d1424;border-radius:20px;padding:48px 48px;border:1px solid #1a2540;">
+
+              <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                <!-- Icon -->
+                <tr>
+                  <td align="center" style="padding-bottom:28px;">
+                    <table cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td style="width:68px;height:68px;background:rgba(234,179,8,0.08);border-radius:50%;border:1px solid rgba(234,179,8,0.25);text-align:center;vertical-align:middle;">
+                          <span style="font-size:28px;line-height:68px;">&#128274;</span>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <!-- Heading -->
+                <tr>
+                  <td align="center" style="padding-bottom:12px;">
+                    <h1 class="email-heading" style="margin:0;font-size:26px;font-weight:700;color:#f1f5f9;letter-spacing:-0.5px;font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.2;">
+                      Withdrawal Confirmation
+                    </h1>
+                  </td>
+                </tr>
+
+                <!-- Subtext -->
+                <tr>
+                  <td align="center" style="padding-bottom:32px;">
+                    <p style="margin:0;font-size:15px;color:#64748b;line-height:1.7;max-width:380px;font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;">
+                      Your withdrawal of <strong style="color:#94a3b8;">${{AMOUNT}} USD</strong> has been approved. Enter the OTP below on Vested to confirm and complete your withdrawal.
+                    </p>
+                  </td>
+                </tr>
+
+                <!-- OTP Box -->
+                <tr>
+                  <td align="center" style="padding-bottom:32px;">
+                    <table cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td style="background:linear-gradient(135deg,rgba(234,179,8,0.12) 0%,rgba(234,179,8,0.06) 100%);border:1px solid rgba(234,179,8,0.30);border-radius:16px;padding:24px 40px;text-align:center;">
+                          <p style="margin:0 0 8px 0;font-size:11px;font-weight:600;color:#ca8a04;letter-spacing:2px;text-transform:uppercase;font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;">
+                            Your One-Time Password
+                          </p>
+                          <p class="otp-box" style="margin:0;font-size:44px;font-weight:700;color:#fde047;letter-spacing:16px;font-family:'JetBrains Mono','Courier New',monospace;line-height:1;">
+                            {{OTP_CODE}}
+                          </p>
+                          <p style="margin:12px 0 0 0;font-size:12px;color:#854d0e;font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;">
+                            &#x23F1; Expires in 15 minutes
+                          </p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <!-- Steps -->
+                <tr>
+                  <td style="padding-bottom:28px;">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#0a1120;border-radius:12px;border:1px solid #1a2540;">
+                      <tr>
+                        <td style="padding:20px 24px;">
+                          <p style="margin:0 0 14px 0;font-size:13px;font-weight:600;color:#94a3b8;font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;">How to complete your withdrawal:</p>
+                          <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                              <td style="padding:4px 0;">
+                                <p style="margin:0;font-size:13px;color:#64748b;line-height:1.6;font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;">
+                                  <span style="color:#22c55e;font-weight:700;">1.</span> Go to <strong style="color:#94a3b8;">Transactions</strong> on Vested
+                                </p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td style="padding:4px 0;">
+                                <p style="margin:0;font-size:13px;color:#64748b;line-height:1.6;font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;">
+                                  <span style="color:#22c55e;font-weight:700;">2.</span> Click the <strong style="color:#fde047;">Enter OTP</strong> button on your approved withdrawal
+                                </p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td style="padding:4px 0;">
+                                <p style="margin:0;font-size:13px;color:#64748b;line-height:1.6;font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;">
+                                  <span style="color:#22c55e;font-weight:700;">3.</span> Enter the 6-digit OTP above
+                                </p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td style="padding:4px 0;">
+                                <p style="margin:0;font-size:13px;color:#64748b;line-height:1.6;font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;">
+                                  <span style="color:#22c55e;font-weight:700;">4.</span> Your funds will be released within 24–48 hours
+                                </p>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <!-- Divider -->
+                <tr>
+                  <td style="padding-bottom:24px;">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td style="border-top:1px solid #1a2540;"></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <!-- Warning -->
+                <tr>
+                  <td>
+                    <p style="margin:0;font-size:12px;color:#475569;line-height:1.6;font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;text-align:center;">
+                      &#128274;&nbsp;<strong style="color:#64748b;">Did not request a withdrawal?</strong> Please contact support immediately at <a href="mailto:support@vested.app" style="color:#22c55e;text-decoration:none;">support@vested.app</a>. Never share this OTP with anyone.
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td align="center" style="padding-top:32px;padding-bottom:8px;">
+              <p style="margin:0;font-size:12px;color:#334155;font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.6;">
+                &copy; 2026 Vested. All rights reserved.<br>
+                The professional crypto copy-trading platform.
+              </p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>
